@@ -1,4 +1,4 @@
-# has the expected columns
+# yields the expected data structure
 
     Code
       str(out)
