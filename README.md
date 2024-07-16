@@ -23,20 +23,21 @@ devtools::install_github("2DegreesInvesting/tiltPolish")
 ## Example
 
 ``` r
-library(tiltPolish)
 library(dplyr, warn.conflicts = FALSE)
-# styler: off
-product <- tibble::tribble(
-        ~benchmark, ~tilt_subsector, ~min, ~max, ~other,
-             "all", "construction residential", 100, 101, 1,
-            "unit", "construction residential", 100, 101, 1,
-  "tilt_subsector", "construction residential", 100, 101, 1,
-  "tilt_subsector",           "something else", 100, 101, 1,
-)
-# styler: on
+library(tiltPolish)
+
+# Example prouct level result of the emissions indicator
+emissions_product
+#> # A tibble: 4 × 5
+#>   benchmark      tilt_subsector             min   max other
+#>   <chr>          <chr>                    <dbl> <dbl> <dbl>
+#> 1 all            construction residential     1     2     3
+#> 2 unit           construction residential     1     2     3
+#> 3 tilt_subsector construction residential     1     2     3
+#> 4 tilt_subsector something else               1     2     3
 
 cols <- c("benchmark", "tilt_subsector", "min", "max")
-product |> 
+emissions_product |> 
   select(all_of(cols)) |> 
   filter(benchmark == "tilt_subsector") |> 
   # should be unnecessary but just in case
@@ -44,6 +45,6 @@ product |>
 #> # A tibble: 2 × 4
 #>   benchmark      tilt_subsector             min   max
 #>   <chr>          <chr>                    <dbl> <dbl>
-#> 1 tilt_subsector construction residential   100   101
-#> 2 tilt_subsector something else             100   101
+#> 1 tilt_subsector construction residential     1     2
+#> 2 tilt_subsector something else               1     2
 ```
