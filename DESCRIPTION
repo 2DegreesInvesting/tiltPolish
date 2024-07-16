@@ -6,8 +6,9 @@ Authors@R:
            comment = c(ORCID = "https://orcid.org/0000-0002-1986-7988"))
 Description: What the package does (one paragraph).
 License: GPL (>= 3)
+URL: https://github.com/2DegreesInvesting/tiltPolish,
+    https://2degreesinvesting.github.io/tiltPolish/
+BugReports: https://github.com/2DegreesInvesting/tiltPolish/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://github.com/2DegreesInvesting/tiltPolish, https://2degreesinvesting.github.io/tiltPolish/
-BugReports: https://github.com/2DegreesInvesting/tiltPolish/issues
