@@ -26,7 +26,7 @@ devtools::install_github("2DegreesInvesting/tiltPolish")
 library(dplyr, warn.conflicts = FALSE)
 library(tiltPolish)
 
-# Example prouct level result of the emissions indicator
+# Example product level result of the emissions indicator
 emissions_product
 #> # A tibble: 4 × 5
 #>   benchmark      tilt_subsector             min   max other
