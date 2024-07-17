@@ -1,6 +1,6 @@
 test_that("yields the expected columns", {
   data <- emissions_product
-  crucial <- col_summarize_co2_range()
+  crucial <- c(col_by(), col_pick(), col_min(), col_max())
   expect_named(summarize_co2_range(data), crucial)
 })
 
