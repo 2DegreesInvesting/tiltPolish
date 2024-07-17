@@ -4,9 +4,9 @@
 \name{tiltPolish-package}
 \alias{tiltPolish}
 \alias{tiltPolish-package}
-\title{tiltPolish: What the Package Does (One Line, Title Case)}
+\title{tiltPolish: Polish 'TILT' Ouput Data}
 \description{
-What the package does (one paragraph).
+Polish 'TILT' output data to make it ready for presentation. This represents one of the external layers of software architecture of the 'TILT' ecosystem.
 }
 \seealso{
 Useful links:
