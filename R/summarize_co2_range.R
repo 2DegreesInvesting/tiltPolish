@@ -2,7 +2,10 @@
 #'
 #' @param data Data frame. The product level result of the emissions indicator.
 #'
-#' @return
+#' @return A data frame:
+#' * Columns: `r toString(c(col_by(), col_pick(), col_min(), col_max()))`.
+#' * Rows: Rows where `r col_by()` equals `r col_pick()`.
+#'
 #' @export
 #'
 #' @examples
