@@ -64,7 +64,30 @@
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/2DegreesInvesting/tiltPolish" class="external-link">tiltPolish</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span>, warn.conflicts <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/2DegreesInvesting/tiltPolish" class="external-link">tiltPolish</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example product level result of the emissions indicator</span></span>
+<span><span class="va">emissions_product</span></span>
+<span><span class="co">#&gt; # A tibble: 4 × 5</span></span>
+<span><span class="co">#&gt;   benchmark      tilt_subsector             min   max other</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;                    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 all            construction residential     1     2     3</span></span>
+<span><span class="co">#&gt; 2 unit           construction residential     1     2     3</span></span>
+<span><span class="co">#&gt; 3 tilt_subsector construction residential     1     2     3</span></span>
+<span><span class="co">#&gt; 4 tilt_subsector something else               1     2     3</span></span>
+<span></span>
+<span><span class="va">cols</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"benchmark"</span>, <span class="st">"tilt_subsector"</span>, <span class="st">"min"</span>, <span class="st">"max"</span><span class="op">)</span></span>
+<span><span class="va">emissions_product</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">select</span><span class="op">(</span><span class="fu">all_of</span><span class="op">(</span><span class="va">cols</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">benchmark</span> <span class="op">==</span> <span class="st">"tilt_subsector"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="co"># should be unnecessary but just in case</span></span>
+<span>  <span class="fu">distinct</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; # A tibble: 2 × 4</span></span>
+<span><span class="co">#&gt;   benchmark      tilt_subsector             min   max</span></span>
+<span><span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;                    &lt;dbl&gt; &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 tilt_subsector construction residential     1     2</span></span>
+<span><span class="co">#&gt; 2 tilt_subsector something else               1     2</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
