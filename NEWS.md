@@ -2,7 +2,7 @@
 
 # tiltPolish 0.0.0.9005 (2024-07-17)
 
-* test: Check crucial names (#8).
+* fix: Fix R CMD check (#8).
 
 # tiltPolish 0.0.0.9004 (2024-07-17)
 
