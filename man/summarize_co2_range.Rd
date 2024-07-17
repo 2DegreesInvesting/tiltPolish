@@ -10,11 +10,9 @@ summarize_co2_range(data)
 \item{data}{Data frame. The product level result of the emissions indicator.}
 }
 \value{
-A data frame:
-\itemize{
-\item Columns: benchmark, tilt_subsector, min, max.
-\item Rows: Rows where benchmark equals tilt_subsector.
-}
+A data frame with the columns
+benchmark, tilt_subsector, min, max and all rows
+where the column benchmark equals tilt_subsector.
 }
 \description{
 Summarize the range of CO2
