@@ -1,20 +1,22 @@
 Package: tiltPolish
-Title: What the Package Does (One Line, Title Case)
+Title: Polish 'TILT' Ouput Data
 Version: 0.0.0.9003
 Authors@R: 
     person("Mauro", "Lepore", , "maurolepore@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0002-1986-7988"))
-Description: What the package does (one paragraph).
+Description: Polish 'TILT' output data to make it ready for presentation.
+    This represents one of the external layers of software architecture of
+    the 'TILT' ecosystem.
 License: GPL (>= 3)
 URL: https://github.com/2DegreesInvesting/tiltPolish,
     https://2degreesinvesting.github.io/tiltPolish/
 BugReports: https://github.com/2DegreesInvesting/tiltPolish/issues
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+Depends: 
+    R (>= 2.10)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Depends: 
-    R (>= 2.10)
+Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
