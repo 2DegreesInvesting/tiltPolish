@@ -1,4 +1,4 @@
-rename_webtool_cols_at_product_level <- function(data) {
+rename_transition_risk_profile_cols_product <- function(data) {
   data |>
     rename(
       product = "ep_product",
