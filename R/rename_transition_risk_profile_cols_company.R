@@ -1,3 +1,8 @@
+#' Rename transition risk profile columns at company level
+#'
+#' @param data Dataframe.
+#' @keywords internal
+#' @export
 rename_transition_risk_profile_cols_company <- function(data) {
   data |>
     rename(
