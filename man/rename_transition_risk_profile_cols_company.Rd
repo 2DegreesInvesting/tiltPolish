@@ -4,12 +4,10 @@
 \alias{rename_transition_risk_profile_cols_company}
 \title{Rename transition risk profile columns at company level}
 \usage{
-rename_transition_risk_profile_cols_company(data, include_co2 = FALSE)
+rename_transition_risk_profile_cols_company(data)
 }
 \arguments{
 \item{data}{Dataframe.}
-
-\item{include_co2}{Logical. Include \verb{co2_*} columns ?}
 }
 \description{
 Rename transition risk profile columns at company level
