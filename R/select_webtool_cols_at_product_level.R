@@ -1,3 +1,8 @@
+#' Select webtool columns at product level
+#'
+#' @param data Dataframe.
+#' @keywords internal
+#' @export
 select_webtool_cols_at_product_level <- function(data) {
   data |>
     select(
