@@ -1,10 +1,13 @@
 #' Rename transition risk profile columns at company level
 #'
 #' @param data Dataframe.
-#' @param include_co2 Logical. Include `co2_*` columns ?
 #' @keywords internal
 #' @export
-rename_transition_risk_profile_cols_company <- function(data, include_co2 = FALSE) {
+rename_transition_risk_profile_cols_company <- function(data) {
+  if ("co2_avg" %in% names(data)) {
+    data <- data |>
+      rename(co2e_avg = "co2_avg")
+  }
   data |>
     rename(
       grouping_emission = "benchmark",
@@ -15,6 +18,5 @@ rename_transition_risk_profile_cols_company <- function(data, include_co2 = FALS
       sector_target_avg_best_case = "avg_reduction_targets_best_case",
       sector_target_avg_worst_case = "avg_reduction_targets_worst_case",
       grouping_transition_risk = "benchmark_tr_score_avg"
-    ) |>
-    rename_with(~ ifelse(include_co2, "co2e_avg", .), "co2_avg")
+    )
 }
