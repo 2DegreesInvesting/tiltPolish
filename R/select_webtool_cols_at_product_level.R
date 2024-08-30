@@ -7,7 +7,6 @@ select_webtool_cols_at_product_level <- function(data) {
   data |>
     select(
       -c(
-        "activity_uuid_product_uuid",
         "emissions_profile_equal_weight",
         "emissions_profile_best_case",
         "emissions_profile_worst_case",
