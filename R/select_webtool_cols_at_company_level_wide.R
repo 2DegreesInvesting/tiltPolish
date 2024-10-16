@@ -16,7 +16,10 @@ select_webtool_cols_at_company_level_wide <- function(data) {
         "transition_risk_category_low",
         "transition_risk_category_medium",
         "transition_risk_category_high",
-        "transition_risk_category_NA"
+        "transition_risk_category_NA",
+        "cov_transition_risk",
+        "cov_emission_rank",
+        "cov_sector_target"
       )
     ) |>
     distinct()
